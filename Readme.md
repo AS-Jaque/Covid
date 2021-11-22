@@ -1,1 +1,1 @@
-Projeto em parceria da ATOS e UFN
+Este projeto é destinado a parceria ATOS e UFN
