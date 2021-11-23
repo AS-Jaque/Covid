@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<HTML lang="pt-br">
+    <head>
+        <title>Teste 1 da lâmpada</title>
+        <meta charset="UTF-8"/>
+    </head>
+    <body>
+        <script>
+            function acendeLampada(){
+                document.getElementById("troca").src="_imagens/_lampada/lampada-acesa.jpg";
+            }
+
+            function apagaLampada(){
+                document.getElementById("troca").src="_imagens/_lampada/lampada-apagada.jpg";
+            }
+
+            function quebraLampada(){
+                document.getElementById("troca").src="_imagens/_lampada/lampada-quebrada.jpg";
+            }
+        </script>
+    </body>
+        <h1>Acenda a lâmpada</h1>
+        <img src="_imagens/_lampada/lampada-apagada.jpg" id="troca" onmousemove="acendeLampada()" onmouseout="apagaLampada()" onclick="quebraLampada()"/>
+</HTML>

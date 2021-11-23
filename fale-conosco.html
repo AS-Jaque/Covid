@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8"/>
+    <title> fale-conosco</title>
+    <link rel="stylesheet" type="text/css" href="_css/estilo.css">
+    <link rel="stylesheet" type="text/css" href="_css/form.css">
+    <script src="_javaScript/funcoes.js"></script>
+</head> 
+
+<body>
+    <div id="fale-conosco">
+<h1>COVID-19</h1>
+<h2>A cura está a caminho</h2>
+
+<figure class="foto_legenda">
+    <img id="icone" src="_imagens/vacina.png"/>
+    <figcaption>
+        <h3>Vacina para o coronavírus</h3>
+        <p>Seja voluntário</p>
+    </figcaption>
+    </figure>
+
+    <nav id="menu">
+        <h1>Menu Principal</h1>
+        <ul>
+        <li onmousemove="trocaIcone('_imagens/_casa.png')" onmouseout="trocaIcone('_imagens/vacina.png')"<a href="index.html">Home</a></li>
+        <li onmousemove="trocaIcone('_imagens/atchim.png')" onmouseout="trocaIcone('_imagens/vacina.png')"><a href="sintomas.html">Sinais e sintomas</a></li>
+        <li onmousemove="trocaIcone('_imagens/_causas2.png')" onmouseout="trocaIcone('_imagens/vacina.png')"><a href="Causas.html">Causas</a></li>
+        <li onmousemove="trocaIcone('_imagens/_mecanismos.png')" onmouseout="trocaIcone('_imagens/vacina.png')"><a href="mecanismo.html">Mecanismo</a></li>
+        <li onmousemove="trocaIcone('_imagens/_fale_conosco.png')" onmouseout="trocaIcone('_imagens/vacina.png')"><a href="fale-conosco.html">Fale conosco</a></li>
+        </ul>
+        </nav>
+
+<h3>Fale Conosco > Contato</h3>
+<h1>Formulário de Contato</h1>
+<h2>by UFN - ATOS</h2> 
+<h3>Atualizado em Outubro de 2021</h3>
+
+<form method="post" id="fContato" action="mailto:jaqueline.as@ufn.edu.br">
+<fieldset id="usuario"> <legend>Identificação do Usuário</legend>
+<p><label for="cNome">Nome:</label><input type="text" name="tNome" id="cNome" size="20" maxlength="50" placeholder="Digite o nome"/></p>
+<p><label for="cData">Data de Nascimento:</label><input type="date" name="tData" id="cData"/></p>
+<p><label for="cEmail">E-mail:</label><input type="email" name="tEmail" id="cEmail" size="20" maxlength="30" placeholder="Digite o e-mail"/></p>
+<p><label for="cSenha">Senha:</label> <input type="password" name="tSenha" id="cSenha" size="20" maxlength="8" placeholder="Senha com 8 caracteres"/></p>
+<fieldset id="sexo"><legend>Sexo</legend>
+    <p> <input type="radio" name="tSexo" id="cMasc"/><label form="cMasc">Masculino</label></p>
+    <p> <input type="radio" name="tSexo" id="cFem"/><label form="cFem" checked>Feminino</label></p>
+</fieldset>
+</fieldset>
+
+<fieldset id="endereco"> <legend>Endereço do Usuário</legend>
+<p>    <label for="cRua">Logradouro:</label><input type="text" name="tRua" id="cRua" maxlength="40" placeholder="Rua, Avenida, Travessa, etc..."/></p>
+<p>   <label for="cNum">Número:</label><input type="number" name="tNum" id="cNum" min="0" max="99999" placeholder="Número"/></p>
+<p>    <label for="cEst">Estado:</label></p>
+<p><select name="tEst" id="cEst">
+    <option selected>--Escolha seu estado--</option>
+    <optgroup label="Região Sul"> 
+    <option>Rio Grande do Sul</option>
+    <option>Santa Catarina</option>
+    <option>Paraná</option>
+    </optgroup>
+    <optgroup label="Região Sudeste">
+    <option>São Paulo</option>
+    <option>Rio de Janeiro</option>
+    <option>Minas Gerais</option>
+    <option>Espírito Santo</option>
+    </optgroup>
+    <optgroup label="Região Nordeste">
+    <option>Bahia</option>
+    <option>Sergipe</option>
+    <option>Alagoas</option>
+    <option>Pernambuco</option>
+    <option>Paraíba</option>
+    <option>Rio Grande do Norte</option>
+    <option>Maranhão</option>
+    <option>Ceará</option>
+    </optgroup>
+</select>
+</p>
+
+<p>    
+    <label for="cCid">Cidade:</label>
+    <input type="text" name="tCid" id="cCid" maxlength="40" size="20" placeholder="Sua cidade" list="cidades">
+    <datalist id="cidades">
+        <option value="Santa Maria"></option>
+        <option value="Agudo"></option>
+        <option value="São Sepé"></option>
+        <option value="Alegria"></option>
+    </datalist>
+</p>
+</fieldset>
+<p>
+<fieldset id="mensagem">
+<legend>Mensagem do Usuário</legend>
+    <label for="cUrg">Grau de Urgência:</label>
+    Min<input type="range" name="tUrg" id="cUrg" min="0" max="10" step="2"/>Max</p>
+    <p> <label for="cMsg">Mensagem:</label>
+    <textarea name="tMsg" id="cMsg" cols="40" rows="6" placeholder="Digite sua mensagem"></textarea>
+    </p>
+</fieldset>
+
+<fieldset id="ajuda">
+    <p>Quero Ajudar</p>
+    <p>Gostaria de me candidatar como voluntário para novos testes de vacinas</p>
+    <p><input type="radio" name="tAjuda" id="cSim" checked/><label for="cSim">Sim</label></p>
+    <p><input type="radio" name="tAjuda" id="cNao"/><label for="nSim">Não</label></p>
+</fieldset>    
+
+
+<input type="submit" value="Enviar"/>
+</form>
+
+<h5> Copyright 2021 - by Sylvio Vieira</h5> 
+<h5>Facebook | Twitter</h5>
+</div>
+</body>
+</html>
